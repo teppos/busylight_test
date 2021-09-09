@@ -17,8 +17,27 @@
         <dependency>
             <artifactId>busylight-core</artifactId>
             <groupId>com.fyayc.essen</groupId>
-            <version>1.0.1-v2.2a</version>
+            <version>1.0.1-v2.2</version>
         </dependency>
     </dependencies>
 
+    <build>
+	<plugins>
+		<plugin>
+			<artifactId>maven-assembly-plugin</artifactId>
+			<version>3.3.0</version>
+			<configuration>
+				<descriptorRefs>
+					<descriptorRef>jar-with-dependencies</descriptorRef>
+				</descriptorRefs>
+
+				<archive>
+					<manifest>
+						<mainClass>Test</mainClass>
+					</manifest>
+				</archive>
+			</configuration>
+		</plugin>
+	</plugins>       
+    </build>
 </project>
